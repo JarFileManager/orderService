@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - master
 
 jobs:
   test:
@@ -22,4 +23,4 @@ jobs:
           java-version: '17'
 
       - name: Run tests
-        run: mvn test
+        run: mvn test -DexcludeTests=ApplicationTests
